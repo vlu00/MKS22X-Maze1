@@ -21,10 +21,8 @@ public class ReadFile {
         rows++;
       }
 
+      rows = rows - 1;
       cols = line.length();
-
-      System.out.println();
-      System.out.println(maze);
 
       String[][] board = new String [rows][cols];
       int i = 0;

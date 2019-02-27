@@ -6,6 +6,7 @@ public class ReadFile {
   public static void main(String args[]) {
     int rows = 0;
     int cols = 0;
+    String line = "";
 
     try {
       File text = new File("Maze1.txt");
@@ -13,12 +14,12 @@ public class ReadFile {
       Scanner inf = new Scanner(text);
 
       while(inf.hasNextLine()){
-        String line = inf.nextLine();
+        line = inf.nextLine();
         System.out.println(line);
         rows++;
       }
 
-      System.out.println(rows-1);
+      cols = line.length();
 
     } catch (FileNotFoundException e) {
       System.out.print("File not found.");
